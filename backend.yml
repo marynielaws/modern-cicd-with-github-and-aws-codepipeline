@@ -29,6 +29,9 @@ Resources:
         WriteCapacityUnits: 5
       SSESpecification:
         SSEEnabled: true # Enable server-side encryption for the table
+      Tags:
+        - Key: "Project"
+          Value: !Sub "HotelApp-${Environment}"
 
   # IAM Role for App Runner to access DynamoDB
   AppRunnerInstanceRole:
@@ -105,7 +108,7 @@ Resources:
       EvaluationPeriods: 1
       Threshold: 4 # 80% of 5 ReadCapacityUnits
       ComparisonOperator: "GreaterThanThreshold"
-
+ 
   AppRunnerService:
     Type: AWS::AppRunner::Service
     Properties:
