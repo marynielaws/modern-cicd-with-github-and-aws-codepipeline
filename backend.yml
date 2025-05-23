@@ -32,6 +32,8 @@ Resources:
       Tags:
         - Key: "Project"
           Value: !Sub "HotelApp-${Environment}"
+        - Key: "Project2"
+          Value: !Sub "HotelApp-${Environment}"
 
   # IAM Role for App Runner to access DynamoDB
   AppRunnerInstanceRole:
