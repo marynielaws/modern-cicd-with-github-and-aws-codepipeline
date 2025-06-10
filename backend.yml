@@ -28,7 +28,7 @@ Resources:
         ReadCapacityUnits: 5
         WriteCapacityUnits: 5
       SSESpecification:
-        SSEEnabled: true # Enable server-side encryption for the table
+        SSEEnabled: false # Enable server-side encryption for the table
       Tags:
         - Key: "Project"
           Value: !Sub "HotelApp-${Environment}"        
